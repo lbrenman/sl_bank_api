@@ -99,7 +99,7 @@
                 "examples": {
                   "example-1": {
                     "value": {
-                      "apiName": "POST/cashpro/reporting/v1/funds-checks",
+                      "apiName": "POST/reporting/v1/funds-checks",
                       "reason": {
                         "reasonCode": 400,
                         "reasonDescription": "Bad Request"
@@ -155,7 +155,7 @@
                 "examples": {
                   "example-1": {
                     "value": {
-                      "apiName": "POST/cashpro/reporting/v1/funds-checks",
+                      "apiName": "POST/reporting/v1/funds-checks",
                       "reason": {
                         "reasonCode": 401,
                         "reasonDescription": "Authentication Failure"
