@@ -1,0 +1,109 @@
+{
+  "openapi": "3.0.0",
+  "x-stoplight": {
+    "id": "hblgdd394cli2"
+  },
+  "info": {
+    "title": "Account Information",
+    "version": "1.0",
+    "description": "Account Information",
+    "contact": {
+      "name": "Leor Brenman",
+      "email": "lbrenman99@hotmail.com",
+      "url": "https://www.leorbrenman.com"
+    },
+    "license": {
+      "url": "https://www.leorbrenman.com",
+      "name": "NA"
+    },
+    "termsOfService": "NA"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080"
+    }
+  ],
+  "paths": {
+    "/reporting/v1/funds-checks": {
+      "post": {
+        "summary": "Funds Check",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "fundsAvailable": {
+                      "type": "boolean"
+                    }
+                  },
+                  "x-examples": {
+                    "example-1": {
+                      "fundsAvailable": true
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            }
+          }
+        },
+        "operationId": "post-reporting-v1-funds-checks",
+        "description": "Queries current day account balance information to determine if the amount requested is available in the account; supports a single account for the current date. Based on https://developer.bankofamerica.com/CPODevPortal/apidocs/public/#/api/account-information/cashpro-reporting-v1-funds-checks-post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "../models/Funds-Check-Request.yaml"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {},
+    "securitySchemes": {
+      "apikey": {
+        "name": "apikey",
+        "type": "apiKey",
+        "in": "header"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Account Information"
+    }
+  ],
+  "security": [
+    {
+      "apikey": []
+    }
+  ]
+}
