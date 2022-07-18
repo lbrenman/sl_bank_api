@@ -79,9 +79,21 @@
             "application/json": {
               "schema": {
                 "$ref": "../models/Funds-Check-Request.yaml"
+              },
+              "examples": {
+                "example-1": {
+                  "value": {
+                    "account": {
+                      "accountNumber": "600811111111",
+                      "bankId": "BOFAGB22"
+                    },
+                    "amount": "1000.00"
+                  }
+                }
               }
             }
-          }
+          },
+          "description": "Funds Check Request Body"
         }
       }
     }
