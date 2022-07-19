@@ -1,31 +1,10 @@
 type: object
 x-stoplight:
   id: o31c4xguzxx8u
-x-examples:
-  example-1:
-    accountBalances:
-      accountNumber: '600811111111'
-      balances:
-        - amount: '983.97'
-          lastUpdatedDate: '2017-07-04'
-          transactionCode: '010'
-          transactionDescription: Opening Ledger Balance
-      bankId: BOFAGB22
-      currency: EUR
 description: Current Day Balance Inquiry Response Body
 x-tags:
   - Current Day Balance Inquiry
 additionalProperties: false
-examples:
-  - accountBalances:
-      accountNumber: string
-      balances:
-        - amount: string
-          lastUpdatedDate: string
-          transactionCode: string
-          transactionDescription: Opening Ledger Balance
-      bankId: string
-      currency: string
 properties:
   accountBalances:
     type: object
