@@ -124,6 +124,117 @@
           "description": "Funds Check Request Body"
         }
       }
+    },
+    "/reporting/v1/balance-inquiries/current-day": {
+      "post": {
+        "summary": "Current Day Balance Inquiry",
+        "operationId": "post-reporting-v1-balance-inquiries-current-day",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/Current-Day-Balance-Inquiry-Response-Body.json"
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "accountBalances": {
+                        "accountNumber": "600811111111",
+                        "balances": [
+                          {
+                            "amount": "983.97",
+                            "lastUpdatedDate": "2017-07-04",
+                            "transactionCode": "010",
+                            "transactionDescription": "Opening Ledger Balance"
+                          }
+                        ],
+                        "bankId": "BOFAGB22",
+                        "currency": "EUR"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/Current-Day-Balance-Inquiry-Response-Error.json"
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "apiName": "POST/reporting/v1/balance-inquiries/current-day",
+                      "reason": {
+                        "reasonCode": 400,
+                        "reasonDescription": "Bad Request"
+                      },
+                      "status": "Failure",
+                      "transactionIdentification": "99999990-9999-9999-9999-009099999999"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/Current-Day-Balance-Inquiry-Response-Error.json"
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "apiName": "POST/cashpro/reporting/v1/balance-inquiries/current-day",
+                      "reason": {
+                        "reasonCode": 401,
+                        "reasonDescription": "Authentication Failure"
+                      },
+                      "status": "Failure",
+                      "transactionIdentification": "99999990-9999-9999-9999-009099999999"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Balance Inquiry",
+          "Current Day"
+        ],
+        "description": "Current Day Balance Inquiry\n\nhttps://developer.bankofamerica.com/CPODevPortal/apidocs/public/#/api/account-information/cashpro-reporting-v1-balance-inquiries-current-day-post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "../models/Funds-Check-Request-Body.json"
+              },
+              "examples": {
+                "example-1": {
+                  "value": {
+                    "accounts": [
+                      {
+                        "accountNumber": "601022222222",
+                        "bankId": "BOFAFRPP"
+                      }
+                    ],
+                    "balanceAsOfDate": "2017-07-04"
+                  }
+                }
+              }
+            }
+          },
+          "description": "Current Day Balance Inquiry Request Body"
+        }
+      }
     }
   },
   "components": {

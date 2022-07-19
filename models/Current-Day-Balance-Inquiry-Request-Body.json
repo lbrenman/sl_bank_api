@@ -1,0 +1,37 @@
+{
+  "type": "object",
+  "properties": {
+    "accounts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "accountNumber": {
+            "type": "string"
+          },
+          "bankId": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "balanceAsOfDate": {
+      "type": "string"
+    }
+  },
+  "x-examples": {
+    "example-1": {
+      "accounts": [
+        {
+          "accountNumber": "601022222222",
+          "bankId": "BOFAFRPP"
+        }
+      ],
+      "balanceAsOfDate": "2017-07-04"
+    }
+  },
+  "description": "Current Day Balance Inquiry Request Body",
+  "x-tags": [
+    "Current Day Balance Inquiry"
+  ]
+}

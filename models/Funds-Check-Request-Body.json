@@ -25,7 +25,15 @@
       "amount": "1000.00"
     }
   },
-  "examples": [],
+  "examples": [
+    {
+      "account": {
+        "accountNumber": "string",
+        "bankId": "string"
+      },
+      "amount": "string"
+    }
+  ],
   "description": "Funds Check Request Body",
   "x-tags": [
     "Funds Check"
