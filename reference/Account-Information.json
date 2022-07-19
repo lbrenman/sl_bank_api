@@ -51,6 +51,11 @@
                     "value": {
                       "fundsAvailable": true
                     }
+                  },
+                  "example-2": {
+                    "value": {
+                      "fundsAvailable": false
+                    }
                   }
                 }
               }

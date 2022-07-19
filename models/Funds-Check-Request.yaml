@@ -18,3 +18,8 @@ x-examples:
 description: Funds Check Request Body
 x-tags:
   - Funds Check
+examples:
+  - account:
+      accountNumber: string
+      bankId: string
+    amount: string
