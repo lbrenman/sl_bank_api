@@ -14,25 +14,32 @@ properties:
         x-faker: finance.account
       balances:
         type: array
+        minItems: 1
+        maxItems: 3
         items:
           type: object
+          minItems: 1
+          maxItems: 3
           properties:
             amount:
               type: string
               x-faker: finance.amount
             lastUpdatedDate:
               type: string
+              format: date
             transactionCode:
               type: string
+              minLength: 4
+              maxLength: 4
+              pattern: '^([0-9]{4})'
             transactionDescription:
               type: string
-              enum:
-                - Opening Ledger Balance
-                - Checking
-                - Savings
-                - HELOC
-                - LOC
+              x-faker: finance.accountName
       bankId:
         type: string
+        x-faker: finance.bic
       currency:
         type: string
+        enum:
+          - USD
+          - EUR
