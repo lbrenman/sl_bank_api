@@ -8,7 +8,7 @@ Includes:
 * [Account Information](https://developer.bankofamerica.com/CPODevPortal/apidocs/public/#/api/account-information)
 * [Payments](https://developer.bankofamerica.com/CPODevPortal/apidocs/public/#/api/payments)
 
-Mock using Prism as follows:
+Grab OAS document from the /reference folder and mock using Prism as follows:
 
 ```
 prism mock -d <Path to OAS Document>/Account-Information.json
