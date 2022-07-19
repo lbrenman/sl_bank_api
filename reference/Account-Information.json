@@ -58,40 +58,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "apiName": {
-                      "type": "string"
-                    },
-                    "reason": {
-                      "type": "object",
-                      "properties": {
-                        "reasonCode": {
-                          "type": "integer"
-                        },
-                        "reasonDescription": {
-                          "type": "string"
-                        }
-                      }
-                    },
-                    "status": {
-                      "type": "string"
-                    },
-                    "transactionIdentification": {
-                      "type": "string"
-                    }
-                  },
-                  "x-examples": {
-                    "example-1": {
-                      "apiName": "POST/cashpro/reporting/v1/funds-checks",
-                      "reason": {
-                        "reasonCode": 400,
-                        "reasonDescription": "Bad Request"
-                      },
-                      "status": "Failure",
-                      "transactionIdentification": "99999990-9999-9999-9999-009099999999"
-                    }
-                  }
+                  "$ref": "../models/Funds-Check-Response-Error.json"
                 },
                 "examples": {
                   "example-1": {
@@ -114,40 +81,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "apiName": {
-                      "type": "string"
-                    },
-                    "reason": {
-                      "type": "object",
-                      "properties": {
-                        "reasonCode": {
-                          "type": "integer"
-                        },
-                        "reasonDescription": {
-                          "type": "string"
-                        }
-                      }
-                    },
-                    "status": {
-                      "type": "string"
-                    },
-                    "transactionIdentification": {
-                      "type": "string"
-                    }
-                  },
-                  "x-examples": {
-                    "example-1": {
-                      "apiName": "POST/cashpro/reporting/v1/funds-checks",
-                      "reason": {
-                        "reasonCode": 401,
-                        "reasonDescription": "Authentication Failure"
-                      },
-                      "status": "Failure",
-                      "transactionIdentification": "99999990-9999-9999-9999-009099999999"
-                    }
-                  }
+                  "$ref": "../models/Funds-Check-Response-Error.json"
                 },
                 "examples": {
                   "example-1": {
