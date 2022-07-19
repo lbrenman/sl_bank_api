@@ -154,6 +154,23 @@
                         "currency": "EUR"
                       }
                     }
+                  },
+                  "example-2": {
+                    "value": {
+                      "accountBalances": {
+                        "accountNumber": "600811111111",
+                        "balances": [
+                          {
+                            "amount": "21,332.11",
+                            "lastUpdatedDate": "2021-07-04",
+                            "transactionCode": "010",
+                            "transactionDescription": "Opening Ledger Balance"
+                          }
+                        ],
+                        "bankId": "BOFAGB22",
+                        "currency": "USD"
+                      }
+                    }
                   }
                 }
               }
