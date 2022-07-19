@@ -124,7 +124,8 @@
         },
         "tags": [
           "Balance Inquiry",
-          "Current Day"
+          "Current Day",
+          "Account Information"
         ],
         "description": "Current Day Balance Inquiry\n\nhttps://developer.bankofamerica.com/CPODevPortal/apidocs/public/#/api/account-information/cashpro-reporting-v1-balance-inquiries-current-day-post",
         "requestBody": {
@@ -156,7 +157,8 @@
       "post": {
         "summary": "Funds Check",
         "tags": [
-          "Account Information"
+          "Account Information",
+          "Funds Check"
         ],
         "responses": {
           "200": {
@@ -299,7 +301,12 @@
             }
           },
           "description": "Previous Day Balance Inquiry Request Body"
-        }
+        },
+        "tags": [
+          "Account Information",
+          "Balance Inquiry",
+          "Previous Day"
+        ]
       }
     }
   },
