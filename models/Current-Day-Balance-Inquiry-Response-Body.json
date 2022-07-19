@@ -1,5 +1,23 @@
 {
   "type": "object",
+  "x-examples": {
+    "example-1": {
+      "accountBalances": {
+        "accountNumber": "600811111111",
+        "balances": [
+          {
+            "amount": "983.97",
+            "lastUpdatedDate": "2017-07-04",
+            "transactionCode": "010",
+            "transactionDescription": "Opening Ledger Balance"
+          }
+        ],
+        "bankId": "BOFAGB22",
+        "currency": "EUR"
+      }
+    }
+  },
+  "additionalProperties": false,
   "properties": {
     "accountBalances": {
       "type": "object",
@@ -35,26 +53,5 @@
         }
       }
     }
-  },
-  "x-examples": {
-    "example-1": {
-      "accountBalances": {
-        "accountNumber": "600811111111",
-        "balances": [
-          {
-            "amount": "983.97",
-            "lastUpdatedDate": "2017-07-04",
-            "transactionCode": "010",
-            "transactionDescription": "Opening Ledger Balance"
-          }
-        ],
-        "bankId": "BOFAGB22",
-        "currency": "EUR"
-      }
-    }
-  },
-  "description": "Current Day Balance Inquiry Response Body",
-  "x-tags": [
-    "Current Day Balance Inquiry"
-  ]
+  }
 }
