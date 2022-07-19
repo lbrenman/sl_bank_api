@@ -25,6 +25,7 @@ properties:
             lastUpdatedDate:
               type: string
               format: date
+              x-faker: date.recent
             transactionCode:
               type: string
               minLength: 4
