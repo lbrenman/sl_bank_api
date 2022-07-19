@@ -27,24 +27,16 @@
     "/reporting/v1/funds-checks": {
       "post": {
         "summary": "Funds Check",
-        "tags": [],
+        "tags": [
+          "Account Information"
+        ],
         "responses": {
           "200": {
             "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "fundsAvailable": {
-                      "type": "boolean"
-                    }
-                  },
-                  "x-examples": {
-                    "example-1": {
-                      "fundsAvailable": true
-                    }
-                  }
+                  "$ref": "../models/Funds-Check-Response-Body.json"
                 },
                 "examples": {
                   "example-1": {
