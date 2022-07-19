@@ -12,5 +12,8 @@
     "fundsAvailable": {
       "type": "boolean"
     }
-  }
+  },
+  "x-tags": [
+    "Funds Check"
+  ]
 }
