@@ -1,0 +1,14 @@
+type: object
+x-stoplight:
+  id: fy4op9oxq4q8f
+x-examples:
+  example-1:
+    fundsAvailable: true
+examples: []
+description: Funds Check Response Body
+additionalProperties: false
+properties:
+  fundsAvailable:
+    type: boolean
+x-tags:
+  - Funds Check

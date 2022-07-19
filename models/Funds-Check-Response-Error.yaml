@@ -1,0 +1,29 @@
+type: object
+x-stoplight:
+  id: 6rkfxk2gzloe2
+x-examples:
+  example-1:
+    apiName: POST/cashpro/reporting/v1/funds-checks
+    reason:
+      reasonCode: 400
+      reasonDescription: Bad Request
+    status: Failure
+    transactionIdentification: 99999990-9999-9999-9999-009099999999
+additionalProperties: false
+properties:
+  apiName:
+    type: string
+  reason:
+    type: object
+    properties:
+      reasonCode:
+        type: integer
+      reasonDescription:
+        type: string
+  status:
+    type: string
+  transactionIdentification:
+    type: string
+x-tags:
+  - Funds Check
+description: Funds Check Response Error

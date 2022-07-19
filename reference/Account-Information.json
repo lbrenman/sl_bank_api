@@ -36,7 +36,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "../models/Funds-Check-Response-Body.json"
+                  "$ref": "../models/Funds-Check-Response-Body.yaml"
                 },
                 "examples": {
                   "example-1": {
@@ -58,7 +58,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "../models/Funds-Check-Response-Error.json"
+                  "$ref": "../models/Funds-Check-Response-Error.yaml"
                 },
                 "examples": {
                   "example-1": {
@@ -81,7 +81,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "../models/Funds-Check-Response-Error.json"
+                  "$ref": "../models/Funds-Check-Response-Error.yaml"
                 },
                 "examples": {
                   "example-1": {
@@ -106,7 +106,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "../models/Funds-Check-Request-Body.json"
+                "$ref": "../models/Funds-Check-Request-Body.yaml"
               },
               "examples": {
                 "example-1": {
@@ -135,7 +135,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "../models/Current-Day-Balance-Inquiry-Response-Body.json"
+                  "$ref": "../models/Current-Day-Balance-Inquiry-Response-Body.yaml"
                 },
                 "examples": {
                   "example-1": {
@@ -181,7 +181,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "../models/Current-Day-Balance-Inquiry-Response-Error.json"
+                  "$ref": "../models/Current-Day-Balance-Inquiry-Response-Error.yaml"
                 },
                 "examples": {
                   "example-1": {
@@ -204,7 +204,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "../models/Current-Day-Balance-Inquiry-Response-Error.json"
+                  "$ref": "../models/Current-Day-Balance-Inquiry-Response-Error.yaml"
                 },
                 "examples": {
                   "example-1": {
@@ -232,7 +232,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "../models/Funds-Check-Request-Body.json"
+                "$ref": "../models/Current-Day-Balance-Inquiry-Request-Body.yaml"
               },
               "examples": {
                 "example-1": {
