@@ -6,7 +6,7 @@
   "info": {
     "title": "Account Information",
     "version": "1.0",
-    "description": "Account Information (https://developer.bankofamerica.com/CPODevPortal/apidocs/public/#/api/account-information)",
+    "description": "Account Information\n https://developer.bankofamerica.com/CPODevPortal/apidocs/public/#/api/account-information",
     "contact": {
       "name": "Leor Brenman",
       "email": "lbrenman99@hotmail.com",
