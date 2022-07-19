@@ -1,15 +1,16 @@
 {
   "type": "object",
-  "properties": {
-    "fundsAvailable": {
-      "type": "boolean"
-    }
-  },
   "x-examples": {
     "example-1": {
       "fundsAvailable": true
     }
   },
   "examples": [],
-  "description": "Funds Check Response Body"
+  "description": "Funds Check Response Body",
+  "additionalProperties": false,
+  "properties": {
+    "fundsAvailable": {
+      "type": "boolean"
+    }
+  }
 }

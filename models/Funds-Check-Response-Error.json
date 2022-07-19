@@ -1,5 +1,17 @@
 {
   "type": "object",
+  "x-examples": {
+    "example-1": {
+      "apiName": "POST/cashpro/reporting/v1/funds-checks",
+      "reason": {
+        "reasonCode": 400,
+        "reasonDescription": "Bad Request"
+      },
+      "status": "Failure",
+      "transactionIdentification": "99999990-9999-9999-9999-009099999999"
+    }
+  },
+  "additionalProperties": false,
   "properties": {
     "apiName": {
       "type": "string"
@@ -20,17 +32,6 @@
     },
     "transactionIdentification": {
       "type": "string"
-    }
-  },
-  "x-examples": {
-    "example-1": {
-      "apiName": "POST/cashpro/reporting/v1/funds-checks",
-      "reason": {
-        "reasonCode": 400,
-        "reasonDescription": "Bad Request"
-      },
-      "status": "Failure",
-      "transactionIdentification": "99999990-9999-9999-9999-009099999999"
     }
   }
 }
