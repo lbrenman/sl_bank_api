@@ -255,12 +255,50 @@
     },
     "/reporting/v1/balance-inquiries/previous-day": {
       "post": {
-        "summary": "",
+        "summary": "Previous Day Balance Inquiry",
         "operationId": "post-reporting-v1-balance-inquiries-previous-day",
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/Balance-Inquiry-Response-Body.yaml"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/Balance-Inquiry-Response-Error.yaml"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/Balance-Inquiry-Response-Error.yaml"
+                }
+              }
+            }
           }
+        },
+        "description": "Previous Day Balance Inquiry\n\nhttps://developer.bankofamerica.com/CPODevPortal/apidocs/public/#/api/account-information/cashpro-reporting-v1-balance-inquiries-previous-day-post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "../models/Balance-Inquiry-Request-Body.yaml"
+              }
+            }
+          },
+          "description": "Previous Day Balance Inquiry Request Body"
         }
       }
     }
