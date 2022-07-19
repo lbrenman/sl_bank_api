@@ -37,7 +37,8 @@ properties:
               x-faker: finance.accountName
       bankId:
         type: string
-        x-faker: finance.bic
+        enum:
+          - BOFAFRPP
       currency:
         type: string
         enum:
