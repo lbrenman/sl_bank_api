@@ -15,4 +15,4 @@ properties:
     type: string
 description: Current Day Balance Inquiry Request Body
 x-tags:
-  - Current Day Balance Inquiry
+  - Balance Inquiry

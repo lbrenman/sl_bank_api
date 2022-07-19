@@ -2,8 +2,6 @@ type: object
 x-stoplight:
   id: o31c4xguzxx8u
 description: Current Day Balance Inquiry Response Body
-x-tags:
-  - Current Day Balance Inquiry
 additionalProperties: false
 properties:
   accountBalances:
@@ -44,3 +42,5 @@ properties:
         enum:
           - USD
           - EUR
+x-tags:
+  - Balance Inquiry
