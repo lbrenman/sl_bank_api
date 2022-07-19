@@ -106,7 +106,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "../models/Funds-Check-Request.yaml"
+                "$ref": "../models/Funds-Check-Request-Body.json"
               },
               "examples": {
                 "example-1": {
