@@ -17,14 +17,14 @@ properties:
             - Beneficiary Email Address is Required
   endToEndIdentification:
     type: string
-    x-faker: finance.bitcoinAddress
+    x-faker: finance.routingNumber
   paymentStatus:
     type: string
     enum:
       - Rejected By Bank
   transactionIdentification:
     type: string
-    x-faker: finance.routingNumber
+    x-faker: random.alphaNumeric
 description: 'Payments V2 Initiation Response Body  '
 x-tags:
   - Payments Initiation
