@@ -8,7 +8,7 @@ Includes:
 * [Account Information](https://developer.bankofamerica.com/CPODevPortal/apidocs/public/#/api/account-information)
 * [Payments](https://developer.bankofamerica.com/CPODevPortal/apidocs/public/#/api/payments)
 
-## Mock using Prism as follows:
+## Mock using Prism
 
 ```
 prism mock -d https://raw.githubusercontent.com/lbrenman/sl_bank_api/master/reference/Account-Information.json
