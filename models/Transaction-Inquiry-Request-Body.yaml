@@ -17,3 +17,5 @@ properties:
     format: date
 x-tags:
   - Transaction Inquiry
+title: ''
+description: Transaction Inquiry Request Body
