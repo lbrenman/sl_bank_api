@@ -11,8 +11,12 @@ properties:
         type: string
       transactions:
         type: array
+        minItems: 1
+        maxItems: 3
         items:
           type: object
+          minItems: 1
+          maxItems: 3
           properties:
             amount:
               type: string
