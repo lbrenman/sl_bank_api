@@ -1,4 +1,6 @@
 type: object
+x-tags:
+  - Transaction Inquiry
 properties:
   accountTransactions:
     type: object
@@ -22,16 +24,24 @@ properties:
               type: string
             asOfDate:
               type: string
+              format: date
+              x-faker: date.recent
             availability1DayAmount:
               type: string
+              x-faker: finance.amount
             availability2PlusDayAmount:
               type: string
+              x-faker: finance.amount
             availabilityImmediateAmount:
               type: string
+              x-faker: finance.amount
             bankReference:
               type: string
+              x-faker: finance.bic
             creditDebitIndicator:
               type: string
+              enum:
+                - Debit
             customerReference:
               type: string
             detailText:
@@ -46,5 +56,3 @@ properties:
               type: string
             valueDate:
               type: string
-x-tags:
-  - Transaction Inquiry
