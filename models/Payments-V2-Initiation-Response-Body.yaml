@@ -3,21 +3,28 @@ additionalProperties: false
 properties:
   Reason:
     type: array
-    minItems: 1
+    minItems: 0
     maxItems: 1
     items:
       type: object
       properties:
         reasonCode:
           type: string
+          x-faker: finance.iban
         reasonDescription:
           type: string
+          enum:
+            - Beneficiary Email Address is Required
   endToEndIdentification:
     type: string
+    x-faker: finance.bitcoinAddress
   paymentStatus:
     type: string
+    enum:
+      - Rejected By Bank
   transactionIdentification:
     type: string
+    x-faker: finance.routingNumber
 description: 'Payments V2 Initiation Response Body  '
 x-tags:
   - Payments Initiation
