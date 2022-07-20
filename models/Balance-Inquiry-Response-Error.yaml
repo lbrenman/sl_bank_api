@@ -15,6 +15,6 @@ properties:
     type: string
   transactionIdentification:
     type: string
-description: Current Day Balance Inquiry Response Error
+description: Balance Inquiry Response Error
 x-tags:
   - Balance Inquiry

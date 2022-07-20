@@ -1,7 +1,7 @@
 type: object
 x-stoplight:
   id: o31c4xguzxx8u
-description: Current Day Balance Inquiry Response Body
+description: Balance Inquiry Response Body
 additionalProperties: false
 properties:
   accountBalances:

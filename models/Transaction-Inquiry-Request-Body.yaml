@@ -1,10 +1,4 @@
 type: object
-x-stoplight:
-  id: cw6a691iwjyjn
-description: Current Day Balance Inquiry Request Body
-x-tags:
-  - Balance Inquiry
-title: ''
 properties:
   accounts:
     type: array
@@ -15,6 +9,11 @@ properties:
           type: string
         bankId:
           type: string
-  balanceAsOfDate:
+  fromDate:
     type: string
     format: date
+  toDate:
+    type: string
+    format: date
+x-tags:
+  - Transaction Inquiry
