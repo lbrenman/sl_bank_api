@@ -15,6 +15,9 @@ properties:
           - BOFAFRPP
       currency:
         type: string
+        enum:
+          - USD
+          - EUR
       transactions:
         type: array
         minItems: 1
@@ -26,6 +29,7 @@ properties:
           properties:
             amount:
               type: string
+              x-faker: finance.amount
             asOfDate:
               type: string
               format: date
@@ -48,15 +52,24 @@ properties:
                 - Debit
             customerReference:
               type: string
+              x-faker: finance.bic
             detailText:
               type: string
+              enum:
+                - BENEFICIARY UNSTRUCTURED DETAIL TEXT
             itemCount:
               type: string
+              enum:
+                - 1
             transactionCode:
               type: string
+              x-faker: finance.bic
             transactionDescription:
               type: string
+              x-faker: finance.transactionDescription
             transactionType:
               type: string
+              x-faker: finance.transactionType
             valueDate:
               type: string
+              x-faker: date.recent
