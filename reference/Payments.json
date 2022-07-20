@@ -5,11 +5,23 @@
   },
   "info": {
     "title": "Payments",
-    "version": "1.0"
+    "version": "1.0",
+    "contact": {
+      "name": "Leor Brenman",
+      "email": "lbrenman99@hotmail.com",
+      "url": "https://www.leorbrenman.com"
+    },
+    "termsOfService": "NA",
+    "license": {
+      "name": "NA",
+      "url": "https://www.leorbrenman.com"
+    },
+    "description": "Payments\n\nhttps://developer.bankofamerica.com/CPODevPortal/apidocs/public/#/api/payments"
   },
   "servers": [
     {
-      "url": "http://localhost:3000"
+      "url": "http://localhost:8080",
+      "description": "Leor Brenman"
     }
   ],
   "paths": {
@@ -19,18 +31,133 @@
         "operationId": "post-payments-v2-payment-initiations",
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/Payments-V2-Initiation-Response-Body.yaml"
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "Reason": [
+                        {
+                          "reasonCode": "CP212",
+                          "reasonDescription": "Beneficiary Email Address is Required"
+                        }
+                      ],
+                      "endToEndIdentification": "SenderRefSIT18",
+                      "paymentStatus": "Rejected By Bank",
+                      "transactionIdentification": "1234567890ABC"
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "tags": [
           "Payments",
           "Initiation"
         ],
-        "description": "Payments V2 Initiation"
+        "description": "Payments V2 Initiation",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "X-Idempotency-Key",
+            "description": "A unique identifier to be used for a single payment. Length: 1 - 256",
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "../models/Payments-V2-Initiation-Request-Body.yaml"
+              },
+              "examples": {
+                "example-1": {
+                  "value": {
+                    "amount": {
+                      "value": "1.01"
+                    },
+                    "creditor": {
+                      "contactDetails": {
+                        "emailAddress": "you@creditor.com"
+                      },
+                      "name": "Creditor Name",
+                      "postalAddress": {
+                        "addressLine": [
+                          "Address 1",
+                          "Address 2"
+                        ],
+                        "city": "City",
+                        "country": "US"
+                      }
+                    },
+                    "creditorAccount": {
+                      "currency": "CAD"
+                    },
+                    "debtor": {
+                      "contactDetails": {
+                        "emailAddress": "me@debtor.com"
+                      },
+                      "identifiers": [
+                        {
+                          "identification": "identification",
+                          "issuer": "issuer",
+                          "schemeName": "BRANDING"
+                        }
+                      ],
+                      "name": "Debtor Name"
+                    },
+                    "debtorAccount": {
+                      "currency": "CAD",
+                      "identification": "71141234567890"
+                    },
+                    "debtorAgent": {
+                      "institution": {
+                        "identification": "BOFACATT"
+                      }
+                    },
+                    "instructionForCreditorAgent": [
+                      "SQ1:qazwsxedcrfv",
+                      "SA1:edcwsxqaz",
+                      "RPL:EN"
+                    ],
+                    "paymentIdentification": {
+                      "endToEndIdentification": "InteracTest1"
+                    },
+                    "paymentType": {
+                      "localInstrument": "INTERAC"
+                    },
+                    "requestedExecutionDate": "2021-12-06",
+                    "unstructuredRemittance": "Interac Test 1"
+                  }
+                }
+              }
+            }
+          },
+          "description": "Payments V2 Initiation Request Body"
+        }
       }
     }
   },
   "components": {
-    "schemas": {}
-  }
+    "schemas": {},
+    "securitySchemes": {
+      "Authorization": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  },
+  "security": [
+    {
+      "Authorization": []
+    }
+  ]
 }
