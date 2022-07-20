@@ -1,0 +1,20 @@
+type: object
+properties:
+  endToEndIdentification:
+    type: string
+  paymentStatus:
+    type: string
+  reason:
+    type: array
+    items:
+      type: object
+      properties:
+        reasonCode:
+          type: string
+        reasonDescription:
+          type: string
+  transactionIdentification:
+    type: string
+description: 'Payments V2 Initiation Error 400 Response Body  '
+x-tags:
+  - Payments Initiation

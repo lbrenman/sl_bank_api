@@ -1,0 +1,92 @@
+type: object
+x-stoplight:
+  id: 31b8e0bfa2112
+properties:
+  amount:
+    type: object
+    properties:
+      value:
+        type: string
+  creditor:
+    type: object
+    properties:
+      contactDetails:
+        type: object
+        properties:
+          emailAddress:
+            type: string
+      name:
+        type: string
+      postalAddress:
+        type: object
+        properties:
+          addressLine:
+            type: array
+            items:
+              type: string
+          city:
+            type: string
+          country:
+            type: string
+  creditorAccount:
+    type: object
+    properties:
+      currency:
+        type: string
+  debtor:
+    type: object
+    properties:
+      contactDetails:
+        type: object
+        properties:
+          emailAddress:
+            type: string
+      identifiers:
+        type: array
+        items:
+          type: object
+          properties:
+            identification:
+              type: string
+            issuer:
+              type: string
+            schemeName:
+              type: string
+      name:
+        type: string
+  debtorAccount:
+    type: object
+    properties:
+      currency:
+        type: string
+      identification:
+        type: string
+  debtorAgent:
+    type: object
+    properties:
+      institution:
+        type: object
+        properties:
+          identification:
+            type: string
+  instructionForCreditorAgent:
+    type: array
+    items:
+      type: string
+  paymentIdentification:
+    type: object
+    properties:
+      endToEndIdentification:
+        type: string
+  paymentType:
+    type: object
+    properties:
+      localInstrument:
+        type: string
+  requestedExecutionDate:
+    type: string
+  unstructuredRemittance:
+    type: string
+description: 'Payments V2 Initiation Request Body  '
+x-tags:
+  - Payments Initiation

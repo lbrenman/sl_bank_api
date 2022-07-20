@@ -1,0 +1,20 @@
+type: object
+properties:
+  Reason:
+    type: array
+    items:
+      type: object
+      properties:
+        reasonCode:
+          type: string
+        reasonDescription:
+          type: string
+  endToEndIdentification:
+    type: string
+  paymentStatus:
+    type: string
+  transactionIdentification:
+    type: string
+description: 'Payments V2 Initiation Response Body  '
+x-tags:
+  - Payments Initiation

@@ -1,0 +1,18 @@
+type: object
+properties:
+  apiName:
+    type: string
+  reason:
+    type: object
+    properties:
+      reasonCode:
+        type: integer
+      reasonDescription:
+        type: string
+  status:
+    type: string
+  transactionIdentification:
+    type: string
+description: 'Payments V2 Initiation Error 401 Response Body  '
+x-tags:
+  - Payments Initiation

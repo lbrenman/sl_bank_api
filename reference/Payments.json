@@ -1,0 +1,36 @@
+{
+  "openapi": "3.0.0",
+  "x-stoplight": {
+    "id": "gw76dvbs8qrqb"
+  },
+  "info": {
+    "title": "Payments",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/payments/v2/payment-initiations": {
+      "post": {
+        "summary": "Payments V2 Initiation",
+        "operationId": "post-payments-v2-payment-initiations",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "tags": [
+          "Payments",
+          "Initiation"
+        ],
+        "description": "Payments V2 Initiation"
+      }
+    }
+  },
+  "components": {
+    "schemas": {}
+  }
+}
