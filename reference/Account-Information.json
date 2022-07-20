@@ -80,7 +80,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "../models/Balance-Inquiry-Response-Error.yaml"
+                  "$ref": "../models/Account Information Error Response Body.yaml"
                 },
                 "examples": {
                   "example-1": {
@@ -103,7 +103,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "../models/Balance-Inquiry-Response-Error.yaml"
+                  "$ref": "../models/Account Information Error Response Body.yaml"
                 },
                 "examples": {
                   "example-1": {
@@ -188,7 +188,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "../models/Funds-Check-Response-Error.yaml"
+                  "$ref": "../models/Account Information Error Response Body.yaml"
                 },
                 "examples": {
                   "example-1": {
@@ -211,7 +211,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "../models/Funds-Check-Response-Error.yaml"
+                  "$ref": "../models/Account Information Error Response Body.yaml"
                 },
                 "examples": {
                   "example-1": {
@@ -275,7 +275,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "../models/Balance-Inquiry-Response-Error.yaml"
+                  "$ref": "../models/Account Information Error Response Body.yaml"
                 }
               }
             }
@@ -285,7 +285,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "../models/Balance-Inquiry-Response-Error.yaml"
+                  "$ref": "../models/Account Information Error Response Body.yaml"
                 }
               }
             }
