@@ -8,8 +8,11 @@ properties:
     properties:
       accountNumber:
         type: string
+        x-faker: finance.account
       bankId:
         type: string
+        enum:
+          - BOFAFRPP
       currency:
         type: string
       transactions:
