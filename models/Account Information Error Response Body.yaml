@@ -1,6 +1,7 @@
 type: object
 x-stoplight:
-  id: g29icisdx27t2
+  id: 6rkfxk2gzloe2
+additionalProperties: false
 properties:
   apiName:
     type: string
@@ -15,6 +16,7 @@ properties:
     type: string
   transactionIdentification:
     type: string
-description: Balance Inquiry Response Error
+description: Account Information Error Response Body
+title: ''
 x-tags:
-  - Balance Inquiry
+  - Error

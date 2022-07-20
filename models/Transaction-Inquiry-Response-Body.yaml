@@ -1,0 +1,44 @@
+type: object
+properties:
+  accountTransactions:
+    type: object
+    properties:
+      accountNumber:
+        type: string
+      bankId:
+        type: string
+      currency:
+        type: string
+      transactions:
+        type: array
+        items:
+          type: object
+          properties:
+            amount:
+              type: string
+            asOfDate:
+              type: string
+            availability1DayAmount:
+              type: string
+            availability2PlusDayAmount:
+              type: string
+            availabilityImmediateAmount:
+              type: string
+            bankReference:
+              type: string
+            creditDebitIndicator:
+              type: string
+            customerReference:
+              type: string
+            detailText:
+              type: string
+            itemCount:
+              type: string
+            transactionCode:
+              type: string
+            transactionDescription:
+              type: string
+            transactionType:
+              type: string
+            valueDate:
+              type: string
