@@ -25,7 +25,7 @@ docker run --init --rm -p 4010:4010 stoplight/prism:4.10.1 mock -d -h 0.0.0.0 "h
 ```
 curl --location --request POST 'http://127.0.0.1:4010/reporting/v1/balance-inquiries/previous-day' \
 --header 'Content-Type: application/json' \
---header 'apikey: 123456789' \
+--header 'Authorization: Bearer {{token}}' \
 --data-raw '{
  "accounts": [
   {
