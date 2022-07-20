@@ -431,6 +431,129 @@
           "description": "Current Day Transaction Inquiry Request Body"
         }
       }
+    },
+    "/reporting/v1/transaction-inquiries/previous-day": {
+      "post": {
+        "summary": "Previous Day Transaction Inquiry",
+        "operationId": "post-reporting-v1-transaction-inquiries-previous-day",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/Transaction-Inquiry-Response-Body.yaml"
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "accountTransactions": {
+                        "accountNumber": "601022222222",
+                        "bankId": "BOFAFRPP",
+                        "currency": "EUR",
+                        "transactions": [
+                          {
+                            "amount": "1.00",
+                            "asOfDate": "2017-11-21",
+                            "availability1DayAmount": "string",
+                            "availability2PlusDayAmount": "string",
+                            "availabilityImmediateAmount": "string",
+                            "bankReference": "555555555555",
+                            "creditDebitIndicator": "Debit",
+                            "customerReference": "CUSTREF123",
+                            "detailText": "BENEFICIARY UNSTRUCTURED DETAIL TEXT",
+                            "itemCount": "1",
+                            "transactionCode": "400",
+                            "transactionDescription": "Total Debits",
+                            "transactionType": "Summary",
+                            "valueDate": "2017-11-21"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/Account-Information-Error-Response-Body.yaml"
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "apiName": "POST/reporting/v1/transaction-inquiries/previous-day",
+                      "reason": {
+                        "reasonCode": 400,
+                        "reasonDescription": "Bad Request"
+                      },
+                      "status": "Failure",
+                      "transactionIdentification": "99999990-9999-9999-9999-009099999999"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/Account-Information-Error-Response-Body.yaml"
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "apiName": "POST/cashpro/reporting/v1/transaction-inquiries/previous-day",
+                      "reason": {
+                        "reasonCode": 401,
+                        "reasonDescription": "Authentication Failure"
+                      },
+                      "status": "Failure",
+                      "transactionIdentification": "99999990-9999-9999-9999-009099999999"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Account Information",
+          "Transaction Query",
+          "Previous Day"
+        ],
+        "description": "Previous Day Transaction Inquiry\n\nhttps://developer.bankofamerica.com/CPODevPortal/apidocs/public/#/api/account-information/cashpro-reporting-v1-transaction-inquiries-previous-day-post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "../models/Transaction-Inquiry-Request-Body.yaml"
+              },
+              "examples": {
+                "example-1": {
+                  "value": {
+                    "accounts": [
+                      {
+                        "accountNumber": "601022222222",
+                        "bankId": "BOFAFRPP"
+                      }
+                    ],
+                    "fromDate": "2017-11-21",
+                    "toDate": "2017-11-21"
+                  }
+                }
+              }
+            }
+          },
+          "description": "Previous Day Transaction Inquiry Request Body"
+        }
+      }
     }
   },
   "components": {
