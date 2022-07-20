@@ -1,6 +1,7 @@
 type: object
 x-tags:
   - Transaction Inquiry
+additionalProperties: false
 properties:
   accountTransactions:
     type: object
