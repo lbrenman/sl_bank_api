@@ -24,7 +24,7 @@ properties:
       - Rejected By Bank
   transactionIdentification:
     type: string
-    x-faker: random.alphaNumeric
+    x-faker: finance.iban
 description: 'Payments V2 Initiation Response Body  '
 x-tags:
   - Payments Initiation
