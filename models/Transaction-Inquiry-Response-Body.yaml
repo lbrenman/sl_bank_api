@@ -60,7 +60,7 @@ properties:
             itemCount:
               type: string
               enum:
-                - 1
+                - "1"
             transactionCode:
               type: string
               x-faker: finance.bic
