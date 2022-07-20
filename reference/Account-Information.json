@@ -559,10 +559,9 @@
   "components": {
     "schemas": {},
     "securitySchemes": {
-      "apikey": {
-        "name": "apikey",
-        "type": "apiKey",
-        "in": "header"
+      "Authorization": {
+        "type": "http",
+        "scheme": "bearer"
       }
     }
   },
@@ -573,7 +572,7 @@
   ],
   "security": [
     {
-      "apikey": []
+      "Authorization": []
     }
   ]
 }
