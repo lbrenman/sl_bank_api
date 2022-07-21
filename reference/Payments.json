@@ -54,6 +54,54 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/Payments-V2-Initiation-Error-400-Response-Body.yaml"
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "endToEndIdentification": "USRTP12345",
+                      "paymentStatus": "Rejected By Bank",
+                      "reason": [
+                        {
+                          "reasonCode": "DU04",
+                          "reasonDescription": "Duplicate transaction 'd98a81e2-fc83-4157-9bd1' found associated with given end to end ID"
+                        }
+                      ],
+                      "transactionIdentification": "596780be-67a5-4fdb-a922-061fbce44233"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/Payments-V2-Initiation-Error-401-Response-Body.yaml"
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "apiName": " POST/cashpro/payments/v2/payment-initiations",
+                      "reason": {
+                        "reasonCode": 401,
+                        "reasonDescription": "Authentication Failure"
+                      },
+                      "status": "Failure",
+                      "transactionIdentification": "99999990-9999-9999-9999-009099999999"
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "tags": [
