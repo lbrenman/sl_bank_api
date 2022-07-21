@@ -17,6 +17,7 @@ properties:
           type: string
           enum:
             - Beneficiary Email Address is Required
+            - Invalid transaction status for cancel
   endToEndIdentification:
     type: string
     x-faker: finance.iban
@@ -27,6 +28,6 @@ properties:
   transactionIdentification:
     type: string
     x-faker: finance.iban
-description: Payments V2 Initiation Response Body
+description: 'Payments V2 Response Body (Initiation , Status)'
 x-tags:
   - Payments Initiation

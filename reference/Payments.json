@@ -35,7 +35,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "../models/Payments-V2-Initiation-Response-Body.yaml"
+                  "$ref": "../models/Payments-V2-Response-Body.yaml"
                 },
                 "examples": {
                   "example-1": {
@@ -155,7 +155,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "../models/Payments-V2-Status-Response-Body.yaml"
+                  "$ref": "../models/Payments-V2-Response-Body.yaml"
                 },
                 "examples": {
                   "example-1": {
