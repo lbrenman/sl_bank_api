@@ -10,14 +10,14 @@ properties:
       properties:
         reasonCode:
           type: string
-          x-faker: finance.iban
+          x-faker: finance.routingNumber
         reasonDescription:
           type: string
           enum:
             - Beneficiary Email Address is Required
   endToEndIdentification:
     type: string
-    x-faker: finance.routingNumber
+    x-faker: finance.iban
   paymentStatus:
     type: string
     enum:
