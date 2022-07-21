@@ -90,7 +90,7 @@
                 "examples": {
                   "example-1": {
                     "value": {
-                      "apiName": " POST/cashpro/payments/v2/payment-initiations",
+                      "apiName": " POST/payments/v2/payment-initiations",
                       "reason": {
                         "reasonCode": 401,
                         "reasonDescription": "Authentication Failure"
@@ -254,6 +254,19 @@
               "application/json": {
                 "schema": {
                   "$ref": "../models/Payments-V2-Initiation-Error-401-Response-Body.yaml"
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "apiName": "GET/cashpro/payments/v2/payment-initiations/status",
+                      "reason": {
+                        "reasonCode": 401,
+                        "reasonDescription": "Authentication Failure"
+                      },
+                      "status": "Failure",
+                      "transactionIdentification": "99999990-9999-9999-9999-009099999999"
+                    }
+                  }
                 }
               }
             }
