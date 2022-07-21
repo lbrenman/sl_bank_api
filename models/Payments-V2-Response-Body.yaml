@@ -1,4 +1,6 @@
 type: object
+x-stoplight:
+  id: 31b8e0bfa2112
 additionalProperties: false
 properties:
   Reason:
@@ -25,6 +27,6 @@ properties:
   transactionIdentification:
     type: string
     x-faker: finance.iban
-description: 'Payments V2 Initiation Response Body  '
+description: 'Payments V2 Response Body  '
 x-tags:
   - Payments Initiation
