@@ -1,0 +1,32 @@
+type: object
+x-stoplight:
+  id: w0x9gv8gfcd3j
+additionalProperties: false
+properties:
+  Reason:
+    type: array
+    minItems: 0
+    maxItems: 1
+    items:
+      type: object
+      properties:
+        reasonCode:
+          type: string
+          x-faker: finance.routingNumber
+        reasonDescription:
+          type: string
+          enum:
+            - Beneficiary Email Address is Required
+  endToEndIdentification:
+    type: string
+    x-faker: finance.iban
+  paymentStatus:
+    type: string
+    enum:
+      - Rejected By Bank
+  transactionIdentification:
+    type: string
+    x-faker: finance.iban
+description: Payments V2 Initiation Response Body
+x-tags:
+  - Payments Initiation
