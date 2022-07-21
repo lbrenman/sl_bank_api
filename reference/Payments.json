@@ -35,7 +35,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "../models/Payments-V2-Response-Body.yaml"
+                  "$ref": "../models/Payments-V2-Initiation-Response-Body.yaml"
                 },
                 "examples": {
                   "example-1": {
@@ -155,7 +155,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "../models/Payments-V2-Response-Body.yaml"
+                  "$ref": "../models/Payments-V2-Initiation-Response-Body.yaml"
                 },
                 "examples": {
                   "example-1": {
@@ -174,6 +174,41 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/Payments-V2-Status-Error-400-Response-Body.yaml"
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "reason": [
+                        {
+                          "reasonCode": "CP401",
+                          "reasonDescription": "Invalid element in request"
+                        }
+                      ],
+                      "requestId": null,
+                      "rfiId": "SITEportalTESTING022371",
+                      "transactionIdentification": "A0JALX03YQTC6NII"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/Payments-V2-Initiation-Error-401-Response-Body.yaml"
+                }
+              }
+            }
           }
         },
         "description": "Payments V2 Status",
@@ -187,6 +222,10 @@
             "description": "Bank assigned identifier for the payment at the transaction level Length: 1-36",
             "required": true
           }
+        ],
+        "tags": [
+          "Payments",
+          "Status"
         ]
       }
     }

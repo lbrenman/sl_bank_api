@@ -1,0 +1,19 @@
+type: object
+properties:
+  reason:
+    type: array
+    items:
+      type: object
+      properties:
+        reasonCode:
+          type: string
+        reasonDescription:
+          type: string
+  requestId:
+    type: 'null'
+  rfiId:
+    type: string
+  transactionIdentification:
+    type: string
+x-tags:
+  - Payment Status

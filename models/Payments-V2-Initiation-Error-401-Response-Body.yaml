@@ -13,6 +13,6 @@ properties:
     type: string
   transactionIdentification:
     type: string
-description: 'Payments V2 Initiation Error 401 Response Body  '
+description: 'Payments V2 Initiation Error 401 Response Body (Initiation, Status)'
 x-tags:
   - Payments Initiation
