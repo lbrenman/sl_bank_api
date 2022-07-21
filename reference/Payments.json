@@ -258,7 +258,7 @@
                 "examples": {
                   "example-1": {
                     "value": {
-                      "apiName": "GET/cashpro/payments/v2/payment-initiations/status",
+                      "apiName": "GET/payments/v2/payment-initiations/status",
                       "reason": {
                         "reasonCode": 401,
                         "reasonDescription": "Authentication Failure"
