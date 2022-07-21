@@ -27,6 +27,6 @@ properties:
   transactionIdentification:
     type: string
     x-faker: finance.iban
-description: 'Payments V2 Response Body  '
+description: Payments V2 Response Body (Initiation and Status)
 x-tags:
   - Payments Initiation

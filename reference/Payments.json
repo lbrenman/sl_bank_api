@@ -144,6 +144,51 @@
           "description": "Payments V2 Initiation Request Body"
         }
       }
+    },
+    "/payments/v2/payment-initiations/status": {
+      "get": {
+        "summary": "Payments V2 Status",
+        "operationId": "get-payments-v2-payment-initiations-status",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../models/Payments-V2-Response-Body.yaml"
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "endToEndIdentification": "SenderRefSIT18",
+                      "paymentStatus": "Rejected By Bank",
+                      "reason": [
+                        {
+                          "reasonCode": "CP700",
+                          "reasonDescription": "Invalid transaction status for cancel"
+                        }
+                      ],
+                      "transactionIdentification": "1234567890ABC"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "description": "Payments V2 Status",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "TransactionIdentification",
+            "description": "Bank assigned identifier for the payment at the transaction level Length: 1-36",
+            "required": true
+          }
+        ]
+      }
     }
   },
   "components": {
