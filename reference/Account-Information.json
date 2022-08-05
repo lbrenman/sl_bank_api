@@ -558,21 +558,11 @@
   },
   "components": {
     "schemas": {},
-    "securitySchemes": {
-      "Authorization": {
-        "type": "http",
-        "scheme": "bearer"
-      }
-    }
+    "securitySchemes": {}
   },
   "tags": [
     {
       "name": "Account Information"
-    }
-  ],
-  "security": [
-    {
-      "Authorization": []
     }
   ]
 }
