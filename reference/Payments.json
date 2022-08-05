@@ -293,16 +293,6 @@
   },
   "components": {
     "schemas": {},
-    "securitySchemes": {
-      "Authorization": {
-        "type": "http",
-        "scheme": "bearer"
-      }
-    }
-  },
-  "security": [
-    {
-      "Authorization": []
-    }
-  ]
+    "securitySchemes": {}
+  }
 }
