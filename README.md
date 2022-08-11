@@ -1,6 +1,8 @@
 # sl_bank_api
 Stoplight OAS Bank Mock API
 
+Useful for demonstrations.
+
 Based on Bank of America [CashPro® API's](https://developer.bankofamerica.com/CPODevPortal/apidocs/public/#/home)
 
 Includes:
